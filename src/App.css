@@ -1,38 +1,120 @@
 .App {
-  text-align: center;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    position: relative;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    background-color: #fafafa;
+}
+
+hr {
+    opacity: 0.2;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 20px;
+}
+
+.alert-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.alert-item {
+    margin: 10px;
+    background-color: white !important;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    animation-name: show;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+
+.close-icon {
+    padding: 5px 15px 10px 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-icon:hover {
+    background-color: #fafafa;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.success-alert {
+    /*border-bottom: 3px solid #11ba11;*/
+    color: #14be14;
+    background-color:currentColor
+}
+
+.error-alert {
+    color: red;
+    background-color: currentColor;
+    /*border-bottom: 3px solid red;*/
+}
+.underline{
+    height: 3px ;
+    position: absolute;
+    bottom:0;
+    left:0;
+}
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

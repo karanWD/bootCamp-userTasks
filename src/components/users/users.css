@@ -1,0 +1,50 @@
+.users-container{
+    background-color: white;
+    border:1px solid #eee;
+    width:30%;
+    height: 100vh;
+    overflow:auto;
+    padding:20px
+}
+.user-input-container{
+    border:1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    background-color: #fafafa;
+}
+.user-input-container input{
+    padding: 15px;
+    width: 70%;
+    border:none;
+    background-color: transparent;
+}
+.user-input-container button{
+    width: 30%;
+    padding: 15px;
+    background-color: midnightblue;
+    color:white;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.user-input-container button:hover{
+    opacity: 1;
+}
+.userItem{
+    border-bottom:1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.userItem:hover{
+    background-color: #fafafa;
+}
+.delete-icon{
+    color: #999;
+    cursor: pointer;
+    font-size: 12px;
+}
+.delete-icon:hover{
+    color:red
+}
